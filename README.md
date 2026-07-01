@@ -97,9 +97,9 @@ Server displays: Client says: Hello server
 
 ## Demo
 
-[![Task 1 Demo](https://img.youtube.com/vi/5OlC6bPl4rY/maxresdefault.jpg)](https://www.youtube.com/watch?v=5OlC6bPl4rY)
-
-> Click the image above to watch the Task 1 demonstration.
+<a href="https://www.youtube.com/watch?v=5OlC6bPl4rY">
+  <img src="https://img.youtube.com/vi/5OlC6bPl4rY/hqdefault.jpg" width="300"/>
+</a>
 
 ---
 
@@ -142,9 +142,9 @@ Subscriber receives: Hello subscribers
 
 ## Demo
 
-[![Task 2 Demo](https://img.youtube.com/vi/qaSrG4YC8fA/maxresdefault.jpg)](https://www.youtube.com/watch?v=qaSrG4YC8fA)
-
-> Click the image above to watch the Task 2 demonstration.
+<a href="https://www.youtube.com/watch?v=qaSrG4YC8fA">
+  <img src="https://img.youtube.com/vi/qaSrG4YC8fA/hqdefault.jpg" width="300"/>
+</a>
 
 ---
 
@@ -193,9 +193,9 @@ Subscriber TOPIC_B does not receive the message
 
 ## Demo
 
-[![Task 3 Demo](https://img.youtube.com/vi/Z88o5_oVHVk/maxresdefault.jpg)](https://www.youtube.com/watch?v=Z88o5_oVHVk)
-
-> Click the image above to watch the Task 3 demonstration.
+<a href="https://www.youtube.com/watch?v=Z88o5_oVHVk">
+  <img src="https://img.youtube.com/vi/Z88o5_oVHVk/hqdefault.jpg" width="300"/>
+</a>
 
 ---
 
@@ -220,63 +220,31 @@ For local testing, use:
 127.0.0.1
 ```
 
-This IP address refers to the same computer.
-
-Example:
-
-```bash
-python client.py 127.0.0.1 5000 PUBLISHER TOPIC_A
-```
-
 ---
 
 ## Running on Different Computers
 
 To run clients from another computer on the same network:
 
-1. Start the server on one computer.
-2. Find the server computer's local IP address.
-3. Use that IP address when starting the client.
-
-Example:
-
-```bash
-python client.py 192.168.1.10 5000 SUBSCRIBER TOPIC_A
-```
-
-Make sure the server port is allowed through the firewall.
+1. Start the server on one computer
+2. Find the server's local IP address
+3. Use that IP in the client command
 
 ---
 
 ## Terminating a Client
 
-Any client can disconnect by typing:
+Type:
 
 ```text
 terminate
 ```
 
-The client will close its socket connection and exit.
-
 ---
 
 ## Requirements
 
-- Python 3 installed
-- Terminal or command prompt
-- No external dependencies
-
-Check Python version:
-
-```bash
-python --version
-```
-
-or
-
-```bash
-python3 --version
-```
+- Python 3
 
 ---
 
@@ -285,14 +253,6 @@ python3 --version
 - Client-server architecture
 - Middleware broker architecture
 - TCP socket communication
-- Concurrent client handling using threads
-- Publisher/subscriber pattern
-- Topic-based message routing
-- Command line arguments
-- Basic distributed communication concepts
-
----
-
-## Assignment Context
-
-This project was developed for the Middleware Architectures module assignment. The goal is to demonstrate the design and implementation of a simple Publish/Subscribe middleware using socket programming concepts.
+- Concurrent clients using threads
+- Publish/Subscribe pattern
+- Topic-based routing
