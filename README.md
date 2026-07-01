@@ -64,11 +64,11 @@ No external Python libraries are required.
 
 ---
 
-## Task 1: Basic Client-Server Application
+# Task 1: Basic Client-Server Application
 
 Task 1 implements a basic TCP client-server socket application.
 
-### What It Does
+## What It Does
 
 - Starts a server on a given port
 - Starts a client using server IP and port
@@ -76,32 +76,38 @@ Task 1 implements a basic TCP client-server socket application.
 - Displays client messages on the server terminal
 - Terminates the client when the user types `terminate`
 
-### Run Server
+## Run Server
 
 ```bash
 python server.py 5000
 ```
 
-### Run Client
+## Run Client
 
 ```bash
 python client.py 127.0.0.1 5000
 ```
 
-### Example Flow
+## Example Flow
 
 ```text
 Client types: Hello server
 Server displays: Client says: Hello server
 ```
 
+## Demo
+
+[![Task 1 Demo](https://img.youtube.com/vi/5OlC6bPl4rY/maxresdefault.jpg)](https://www.youtube.com/watch?v=5OlC6bPl4rY)
+
+> Click the image above to watch the Task 1 demonstration.
+
 ---
 
-## Task 2: Publishers and Subscribers
+# Task 2: Publishers and Subscribers
 
 Task 2 extends Task 1 by adding multiple concurrent clients and role-based communication.
 
-### What It Does
+## What It Does
 
 - Supports multiple clients at the same time
 - Each client connects as either a `PUBLISHER` or `SUBSCRIBER`
@@ -109,75 +115,87 @@ Task 2 extends Task 1 by adding multiple concurrent clients and role-based commu
 - Publisher messages are not sent to other publishers
 - Server displays all client activities
 
-### Run Server
+## Run Server
 
 ```bash
 python server.py 5000
 ```
 
-### Run Publisher Client
+## Run Publisher Client
 
 ```bash
 python client.py 127.0.0.1 5000 PUBLISHER
 ```
 
-### Run Subscriber Client
+## Run Subscriber Client
 
 ```bash
 python client.py 127.0.0.1 5000 SUBSCRIBER
 ```
 
-### Example Flow
+## Example Flow
 
 ```text
 Publisher sends: Hello subscribers
 Subscriber receives: Hello subscribers
 ```
 
+## Demo
+
+[![Task 2 Demo](https://img.youtube.com/vi/qaSrG4YC8fA/maxresdefault.jpg)](https://www.youtube.com/watch?v=qaSrG4YC8fA)
+
+> Click the image above to watch the Task 2 demonstration.
+
 ---
 
-## Task 3: Topic-Based Publish/Subscribe Middleware
+# Task 3: Topic-Based Publish/Subscribe Middleware
 
 Task 3 improves the Pub/Sub system by adding topic-based filtering.
 
-### What It Does
+## What It Does
 
 - Each publisher publishes messages under a topic
 - Each subscriber subscribes to a specific topic
 - Messages are delivered only to subscribers of the same topic
 - Multiple publishers and subscribers can connect under different topics
 
-### Run Server
+## Run Server
 
 ```bash
 python server.py 5000
 ```
 
-### Run Subscriber for `TOPIC_A`
+## Run Subscriber for `TOPIC_A`
 
 ```bash
 python client.py 127.0.0.1 5000 SUBSCRIBER TOPIC_A
 ```
 
-### Run Publisher for `TOPIC_A`
+## Run Publisher for `TOPIC_A`
 
 ```bash
 python client.py 127.0.0.1 5000 PUBLISHER TOPIC_A
 ```
 
-### Run Subscriber for `TOPIC_B`
+## Run Subscriber for `TOPIC_B`
 
 ```bash
 python client.py 127.0.0.1 5000 SUBSCRIBER TOPIC_B
 ```
 
-### Example Flow
+## Example Flow
 
 ```text
 Publisher TOPIC_A sends: Hello Topic A
 Subscriber TOPIC_A receives: Hello Topic A
 Subscriber TOPIC_B does not receive the message
 ```
+
+## Demo
+
+[![Task 3 Demo](https://img.youtube.com/vi/Z88o5_oVHVk/maxresdefault.jpg)](https://www.youtube.com/watch?v=Z88o5_oVHVk)
+
+> Click the image above to watch the Task 3 demonstration.
 
 ---
 
@@ -254,7 +272,7 @@ Check Python version:
 python --version
 ```
 
-or:
+or
 
 ```bash
 python3 --version
